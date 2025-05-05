@@ -15,11 +15,9 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // CORS Fix
-const allowedOrigins = ['https://singhcourierservice.vercel.app'];
 app.use(cors({
-  origin: allowedOrigins,
-   methods: ['GET', 'POST', 'PUT', 'DELETE']
-
+  origin: 'https://singhcourierservice.vercel.app',
+  credentials: true,
 }));
 
 // Middleware
