@@ -15,7 +15,7 @@ const TrackingResult = () => {
     const fetchCourier = async () => {
       try {
         setLoading(true); // Start loading when fetch begins
-        const res = await axios.get(`https://singhcourierservice.vercel.app/api/couriers/${trackingId}`);
+        const res = await axios.get(`https://courier-tracking-website-t92q.onrender.com/api/couriers/${trackingId}`);
         setCourierData(res.data);
         setError('');
       } catch (err) {
