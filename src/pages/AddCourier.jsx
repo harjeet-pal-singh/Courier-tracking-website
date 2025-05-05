@@ -33,7 +33,7 @@ const AddCourierForm = () => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:5000/api/couriers', formData, {
+      const response = await axios.post('https://courier-tracking-website-t92q.onrender.com/api/couriers', formData, {
         headers: {
           Authorization: `Bearer ${token}`
         }
