@@ -19,7 +19,7 @@ const allowedOrigins = ['https://singhcourierservice.vercel.app'];
 app.use(cors({
   origin: allowedOrigins,
    methods: ['GET', 'POST', 'PUT', 'DELETE']
-  credentials: true,
+
 }));
 
 // Middleware
