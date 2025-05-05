@@ -16,7 +16,7 @@ const Dashboard = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:5000/api/validateToken', {
+      const response = await axios.get('https://courier-tracking-website-t92q.onrender.com/api/validateToken', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
