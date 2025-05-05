@@ -15,7 +15,7 @@ const TrackingResult = () => {
     const fetchCourier = async () => {
       try {
         setLoading(true); // Start loading when fetch begins
-        const res = await axios.get(`http://localhost:5000/api/couriers/${trackingId}`);
+        const res = await axios.get(`https:singhcourierservice.vercel.app/api/couriers/${trackingId}`);
         setCourierData(res.data);
         setError('');
       } catch (err) {
