@@ -17,7 +17,8 @@ connectDB();
 // CORS Fix
 app.use(cors({
   origin: 'https://singhcourierservice.vercel.app',
-  credentials: true,
+  credentials: true, methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 // Middleware
