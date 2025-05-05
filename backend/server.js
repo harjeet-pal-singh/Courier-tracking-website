@@ -3,31 +3,41 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+
 import connectDB from './config/db.js';
 import courierRoutes from './routes/courierRoutes.js';
 import authRoutes from './routes/auth.js';
 
-
-
 dotenv.config();
+
 const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Connect to MongoDB
 connectDB();
+
+// Middleware
 app.use(cors());
 app.use(express.json());
-console.log('server')
+
+// Routes
 app.use('/api', authRoutes);
 app.use('/api/couriers', courierRoutes);
 
+// Health Check
 app.get('/', (req, res) => {
-  res.send('Courier backend running');
+  res.send('Courier backend is running 🚀');
 });
 
-const PORT = process.env.PORT || 5000;
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}).catch(err => console.error(err));
+// Start Server (only after successful DB connection)
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`✅ Server is running on http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => console.error('❌ MongoDB connection error:', err));
