@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://singhcourierservice.vercel.app/api/login', { username, password });
+      const res = await axios.post('https://courier-tracking-website-t92q.onrender.com/api/login', { username, password });
       localStorage.setItem('token', res.data.token); // save token
       navigate('/dashboard'); // go to dashboard
     } catch (err) {
