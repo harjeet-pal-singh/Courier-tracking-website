@@ -26,7 +26,7 @@ const ManageCouriers = () => {
   useEffect(() => {
     const fetchCouriers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/couriers', {
+        const response = await axios.get('https://singhcourierservice.vercel.app/api/couriers}', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCouriers(response.data);
@@ -39,7 +39,7 @@ const ManageCouriers = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/api/couriers/${id}`, {
+      const response = await axios.delete(`https://singhcourierservice.vercel.app/api/couriers/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCouriers((prev) => prev.filter((c) => c._id !== id));
@@ -78,7 +78,7 @@ const ManageCouriers = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/couriers/${editingCourierId}`,
+        `https://singhcourierservice.vercel.app/api/couriers/${editingCourierId}`,
         {
           sender: editFormData.sender,
           recipient: editFormData.recipient,
