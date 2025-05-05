@@ -9,7 +9,7 @@ const TrackCourier = () => {
 
   const handleTrackCourier = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/couriers/${trackingId}`);
+      const response = await axios.get(`https:singhcourierservice.vercel.app/api/couriers/${trackingId}`);
       console.log("Courier Data:", response.data); // Log the response data
       setCourier(response.data);
       setError(null); // Clear previous error
