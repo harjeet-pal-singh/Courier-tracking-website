@@ -5,7 +5,7 @@ import { protect } from '../middlleware/authMiddleware.js';
 const router = express.Router();
 
 // Get a single courier by tracking ID (Public Route)
-router.get('/:trackingId', async (req, res) => {
+router.get('/api/couriers/:trackingId', async (req, res) => {
   try {
     const courier = await Courier.findOne({ trackingId: req.params.trackingId });
     if (!courier) {
