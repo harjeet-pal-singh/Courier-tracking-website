@@ -26,7 +26,7 @@ const ManageCouriers = () => {
   useEffect(() => {
     const fetchCouriers = async () => {
       try {
-        const response = await axios.get('https://singhcourierservice.vercel.app/api/couriers}', {
+        const response = await axios.get('https://courier-tracking-website-t92q.onrender.com/api/couriers}', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCouriers(response.data);
@@ -39,7 +39,7 @@ const ManageCouriers = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`https://singhcourierservice.vercel.app/api/couriers/${id}`, {
+      const response = await axios.delete(`https://courier-tracking-website-t92q.onrender.com/api/couriers/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCouriers((prev) => prev.filter((c) => c._id !== id));
