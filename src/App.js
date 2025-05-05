@@ -41,7 +41,7 @@ const hideLayout = ['/dashboard', '/manage-courier','/add-courier', '/login']; /
         <Route path='/manage-courier' element={<ProtectedRoute><ManageCouriers/></ProtectedRoute>}/>
         <Route path="*" element={<Home />} />
         <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/track/:trackingId" element={<ProtectedRoute><TrackingResult /></ProtectedRoute>} />
+        <Route path="/track/:trackingId" element={<TrackingResult />} />
         <Route path="/Logout" element={<Logout />} />
       </Routes>
 
