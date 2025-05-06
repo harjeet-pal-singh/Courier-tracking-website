@@ -78,7 +78,7 @@ const ManageCouriers = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `https://singhcourierservice.vercel.app/api/couriers/${editingCourierId}`,
+        https://courier-tracking-website-t92q.onrender.com/api/couriers/${editingCourierId}`,
         {
           sender: editFormData.sender,
           recipient: editFormData.recipient,
