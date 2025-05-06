@@ -77,7 +77,7 @@ const ManageCouriers = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(
+      await axios.put(`
         https://courier-tracking-website-t92q.onrender.com/api/couriers/${editingCourierId}`,
         {
           sender: editFormData.sender,
