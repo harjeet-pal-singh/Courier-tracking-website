@@ -28,7 +28,7 @@ const HeroCarousel = () => {
     </div><div className="wrapper">
         <div className="hero-text-anim">
           <h2>SINGH COURIER SERVICE</h2>
-          <p>Track your package in real time with Singh Courier Service.</p>
+
         </div>
         <div className='herowrapper'>
 
