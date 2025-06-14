@@ -37,8 +37,8 @@ font-family:fangsang;
 
 .nav-links a {
   text-decoration: none;
-  color: #000;
-  font-size: 15px;
+  color: #blue;
+  font-size: 13px;
   padding: 8px 10px;
   transition: 0.3s ease;
   border-bottom: 1px solid transparent;
